@@ -1,10 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Div = styled.div`
+width:400px;
+margin:auto;
+`;
+
 
 class User extends React.Component {
    
     render() { 
         return ( 
-            <div>
+            <Div>
                 <img src={this.props.myUser.avatar_url}/>
                 <p>{this.props.myUser.name}</p>
                 <p>{this.props.myUser.login}</p>
@@ -13,7 +20,7 @@ class User extends React.Component {
                 <p>{this.props.myUser.followers}</p>
                 <p>{this.props.myUser.following}</p>
                 <p>{this.props.myUser.bio}</p>
-            </div>
+            </Div>
          );
     }
 }

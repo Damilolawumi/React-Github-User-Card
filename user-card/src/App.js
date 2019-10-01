@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import {Router} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 import User from './User';
 import Followers from './followers';
@@ -41,8 +41,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <User myUser={this.state.user} />
-        <Followers myFollowers={this.state.followers}/>
+        <Route exact path="/"  >
+          <User myUser={this.state.user} />
+        </Route>
+        <Route exact path="/followers"  >
+          <Followers myFollowers={this.state.followers} />
+        </Route>
+        {/* <Route path="/movies/:id" component={Movie} /> */}
+
+
+
+
       </div>
     );
   }
