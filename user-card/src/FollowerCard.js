@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Div = styled.div`
-margin: 10px;
+margin: 15px;
 width: 350px;
 box-shadow: 2px 2px 4px 2px;
 `;
