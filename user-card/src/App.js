@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import './App.css';
+import User from './User';
 
 
 class App extends React.Component {
@@ -13,13 +14,13 @@ class App extends React.Component {
     }
   }
 
-
   componentDidMount() {
 
     axios.get(`https://api.github.com/users/Damilolawumi`)
       .then((response) => {
+        //set user state to reponse from backend
         this.setState({
-          user: response.data
+          user: response.data,
         })
         console.log(response);
       })
@@ -28,12 +29,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-
+        <User myUser={this.state.user}/>
       </div>
-    );
-  }
-}
-
-export default App;
-
-
+        );
+      }
+    }
+    
+    export default App;
+    
+    
